@@ -1,19 +1,16 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Plane, LogOut, Wrench } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
+import { useAuthUser } from "@/components/ProtectedRoute";
 import { supabase } from "@/integrations/supabase/client";
 
-export const Route = createFileRoute("/_authenticated/app")({
-  component: AppShell,
-});
-
-function AppShell() {
-  const { user } = Route.useRouteContext();
+export function Dashboard() {
+  const { user } = useAuthUser();
   const navigate = useNavigate();
 
   async function handleSignOut() {
     await supabase.auth.signOut();
-    navigate({ to: "/auth", replace: true });
+    navigate("/auth", { replace: true });
   }
 
   return (
