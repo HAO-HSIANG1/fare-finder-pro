@@ -28,17 +28,17 @@ export function Landing() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
-      <header className="sticky top-0 z-10 border-b border-border/60 bg-background/80 backdrop-blur">
+      <header className="sticky top-0 z-10 border-b border-border/50 bg-background/70 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
           <div className="flex items-center gap-2 font-semibold">
-            <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <span className="flex size-8 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm shadow-primary/30">
               <Plane className="size-4" />
             </span>
             Flight Price Notifier
           </div>
           <Link
             to="/auth"
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85"
+            className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-300 hover:scale-105 hover:bg-primary/90 hover:shadow-md hover:shadow-primary/30"
           >
             Sign in / 登入
           </Link>
@@ -52,11 +52,11 @@ export function Landing() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(600px 300px at 50% -5%, oklch(0.62 0.22 292 / 0.28), transparent 70%)",
+              "radial-gradient(640px 320px at 18% -10%, oklch(0.78 0.09 222 / 0.35), transparent 70%), radial-gradient(560px 320px at 88% 0%, oklch(0.68 0.16 38 / 0.22), transparent 70%)",
           }}
         />
         <div className="relative mx-auto max-w-3xl px-4 py-24 text-center sm:px-6 sm:py-32">
-          <p className="animate-fade-in text-sm font-medium tracking-widest text-primary uppercase">
+          <p className="animate-fade-in text-sm font-semibold tracking-widest text-primary uppercase">
             Flight Price Notifier
           </p>
           <h1
@@ -77,7 +77,7 @@ export function Landing() {
           >
             <Link
               to="/auth"
-              className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/85"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-105 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
             >
               Sign in / 登入
             </Link>
@@ -90,8 +90,8 @@ export function Landing() {
         <div className="grid gap-6 sm:grid-cols-3">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={i * 120}>
-              <article className="h-full rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/50">
-                <span className="flex size-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
+              <article className="h-full rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
+                <span className="flex size-11 items-center justify-center rounded-2xl bg-accent/25 text-accent-foreground">
                   <f.icon className="size-5" />
                 </span>
                 <h2 className="mt-4 text-lg font-semibold">{f.title}</h2>
@@ -106,7 +106,7 @@ export function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/60">
+      <footer className="border-t border-border/50">
         <div className="mx-auto max-w-5xl px-4 py-8 text-center text-sm text-muted-foreground sm:px-6">
           © 2026 Flight Price Notifier
         </div>

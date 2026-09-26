@@ -47,11 +47,19 @@ export function Auth() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <header className="border-b border-border/60">
+    <div className="relative flex min-h-screen flex-col bg-background text-foreground">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        style={{
+          background:
+            "radial-gradient(560px 300px at 85% -10%, oklch(0.78 0.09 222 / 0.3), transparent 70%), radial-gradient(480px 280px at 5% 100%, oklch(0.68 0.16 38 / 0.18), transparent 70%)",
+        }}
+      />
+      <header className="relative border-b border-border/50">
         <div className="mx-auto flex max-w-5xl items-center px-4 py-4 sm:px-6">
           <Link to="/" className="flex items-center gap-2 font-semibold">
-            <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <span className="flex size-8 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm shadow-primary/30">
               <Plane className="size-4" />
             </span>
             Flight Price Notifier
@@ -59,8 +67,8 @@ export function Auth() {
         </div>
       </header>
 
-      <main className="flex flex-1 items-center justify-center px-4 py-12">
-        <div className="animate-fade-in-up w-full max-w-sm rounded-2xl border border-border bg-card p-8">
+      <main className="relative flex flex-1 items-center justify-center px-4 py-12">
+        <div className="animate-fade-in-up w-full max-w-sm rounded-3xl border border-border/60 bg-card/80 p-8 shadow-xl shadow-primary/5 backdrop-blur-md">
           <h1 className="text-2xl font-bold">
             {mode === "sign-in" ? "Sign in / 登入" : "Sign up / 註冊"}
           </h1>
@@ -82,7 +90,7 @@ export function Auth() {
                 autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-ring"
+                className="mt-1.5 w-full rounded-2xl border border-input bg-background/80 px-3.5 py-2.5 text-sm outline-none transition-colors duration-200 placeholder:text-muted-foreground focus:border-ring focus:ring-2 focus:ring-primary/15"
                 placeholder="you@example.com"
               />
             </div>
@@ -100,13 +108,13 @@ export function Auth() {
                 }
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm outline-none placeholder:text-muted-foreground focus:border-ring"
+                className="mt-1.5 w-full rounded-2xl border border-input bg-background/80 px-3.5 py-2.5 text-sm outline-none transition-colors duration-200 placeholder:text-muted-foreground focus:border-ring focus:ring-2 focus:ring-primary/15"
                 placeholder="••••••••"
               />
             </div>
 
             {error && (
-              <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+              <p className="rounded-2xl border border-destructive/40 bg-destructive/10 px-3.5 py-2 text-sm text-destructive">
                 {error}
               </p>
             )}
@@ -114,7 +122,7 @@ export function Auth() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85 disabled:opacity-60"
+              className="w-full rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:scale-[1.02] hover:bg-primary/90 hover:shadow-md hover:shadow-primary/25 disabled:pointer-events-none disabled:opacity-60"
             >
               {loading
                 ? "…"

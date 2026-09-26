@@ -6,7 +6,8 @@
 
 /*
  * Flight Price Notifier design system.
- * Dark-first: near-black background, violet accent, Inter typography.
+ * Wanderlust: warm linen background, sunset-coral primary, soft-sky accent,
+ * Nunito typography. Light, airy, laid-back travel vibe.
  */
 
 @theme inline {
@@ -50,44 +51,51 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+  --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.13 0.015 285);
-  --foreground: oklch(0.96 0.01 285);
-  --card: oklch(0.17 0.02 285);
-  --card-foreground: oklch(0.96 0.01 285);
-  --popover: oklch(0.17 0.02 285);
-  --popover-foreground: oklch(0.96 0.01 285);
-  --primary: oklch(0.62 0.22 292);
-  --primary-foreground: oklch(0.98 0.01 292);
-  --secondary: oklch(0.22 0.025 285);
-  --secondary-foreground: oklch(0.96 0.01 285);
-  --muted: oklch(0.22 0.025 285);
-  --muted-foreground: oklch(0.68 0.03 285);
-  --accent: oklch(0.62 0.22 292);
-  --accent-foreground: oklch(0.98 0.01 292);
-  --destructive: oklch(0.62 0.22 25);
-  --destructive-foreground: oklch(0.98 0.01 292);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.62 0.22 292);
-  --chart-1: oklch(0.62 0.22 292);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.17 0.02 285);
-  --sidebar-foreground: oklch(0.96 0.01 285);
-  --sidebar-primary: oklch(0.62 0.22 292);
-  --sidebar-primary-foreground: oklch(0.98 0.01 292);
-  --sidebar-accent: oklch(0.22 0.025 285);
-  --sidebar-accent-foreground: oklch(0.96 0.01 285);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.62 0.22 292);
+  --radius: 1.25rem;
+  /* warm linen off-white */
+  --background: oklch(0.97 0.016 80);
+  /* warm charcoal-brown, soft on the eyes */
+  --foreground: oklch(0.34 0.035 45);
+  /* near-white warm card surface */
+  --card: oklch(0.995 0.008 80);
+  --card-foreground: oklch(0.34 0.035 45);
+  --popover: oklch(0.995 0.008 80);
+  --popover-foreground: oklch(0.34 0.035 45);
+  /* sunset terracotta/coral */
+  --primary: oklch(0.68 0.16 38);
+  --primary-foreground: oklch(0.99 0.012 80);
+  /* warm sandy beige */
+  --secondary: oklch(0.91 0.035 78);
+  --secondary-foreground: oklch(0.34 0.035 45);
+  /* pale sand */
+  --muted: oklch(0.94 0.022 78);
+  --muted-foreground: oklch(0.52 0.035 55);
+  /* soft sky blue */
+  --accent: oklch(0.78 0.09 222);
+  --accent-foreground: oklch(0.27 0.05 240);
+  --destructive: oklch(0.6 0.19 25);
+  --destructive-foreground: oklch(0.99 0.012 80);
+  --border: oklch(0.4 0.045 50 / 14%);
+  --input: oklch(0.4 0.045 50 / 18%);
+  --ring: oklch(0.68 0.16 38);
+  --chart-1: oklch(0.68 0.16 38);
+  --chart-2: oklch(0.78 0.09 222);
+  --chart-3: oklch(0.77 0.13 80);
+  --chart-4: oklch(0.66 0.11 165);
+  --chart-5: oklch(0.7 0.13 350);
+  --sidebar: oklch(0.995 0.008 80);
+  --sidebar-foreground: oklch(0.34 0.035 45);
+  --sidebar-primary: oklch(0.68 0.16 38);
+  --sidebar-primary-foreground: oklch(0.99 0.012 80);
+  --sidebar-accent: oklch(0.94 0.022 78);
+  --sidebar-accent-foreground: oklch(0.34 0.035 45);
+  --sidebar-border: oklch(0.4 0.045 50 / 14%);
+  --sidebar-ring: oklch(0.68 0.16 38);
 }
 
 @layer base {
